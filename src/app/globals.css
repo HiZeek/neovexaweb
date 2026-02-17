@@ -1,11 +1,34 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+@theme {
+  /* Design tokens – v4 generates utilities from --color-* and --shadow-* */
+  --color-primary: #135bec;
+  --color-primary-dark: #0f4bc4;
+  --color-accent-navy: #0a101d;
+  --color-background-light: #ffffff;
+  --color-background-dark: #101622;
+  --color-surface-muted: #f9fafb;
+  --color-text-primary: #111318;
+  --color-text-secondary: #616f89;
+  --color-border-subtle: #f0f2f4;
+
+  --shadow-glass: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  --shadow-glass-hover: 0 10px 15px -3px rgba(19, 91, 236, 0.1),
+    0 4px 6px -2px rgba(19, 91, 236, 0.05), inset 0 0 0 1px rgba(19, 91, 236, 0.2);
+}
+
 @theme inline {
+  /* References to :root vars */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -22,5 +45,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mesh-gradient {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 80% 0%, hsla(220, 85%, 96%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(222, 100%, 98%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(220, 85%, 96%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(222, 100%, 98%, 1) 0px, transparent 50%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
