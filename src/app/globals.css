@@ -10,9 +10,15 @@ html {
 }
 
 @theme {
-  /* Design tokens – v4 generates utilities from --color-* and --shadow-* */
-  --color-primary: #135bec;
-  --color-primary-dark: #0f4bc4;
+  /* Neo Teal brand – v4 generates utilities from --color-* and --shadow-* */
+  --color-primary: #2b9d8a;
+  --color-primary-light: #3db396;
+  --color-primary-deep: #1a7a73;
+  --color-primary-accent: #5dc9b3;
+  --color-success: #2fbf9f;
+  --color-warning: #f2b544;
+  --color-error: #e35d6a;
+  --color-info: #3aa7c9;
   --color-accent-navy: #0a101d;
   --color-background-light: #ffffff;
   --color-background-dark: #101622;
@@ -23,8 +29,8 @@ html {
 
   --shadow-glass: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03),
     inset 0 0 0 1px rgba(255, 255, 255, 0.6);
-  --shadow-glass-hover: 0 10px 15px -3px rgba(19, 91, 236, 0.1),
-    0 4px 6px -2px rgba(19, 91, 236, 0.05), inset 0 0 0 1px rgba(19, 91, 236, 0.2);
+  --shadow-glass-hover: 0 10px 15px -3px rgba(54, 179, 156, 0.12),
+    0 4px 6px -2px rgba(54, 179, 156, 0.06), inset 0 0 0 1px rgba(54, 179, 156, 0.15);
 }
 
 @theme inline {
@@ -48,12 +54,42 @@ body {
 }
 
 .mesh-gradient {
-  background-color: #ffffff;
+  background-color: var(--color-background-light);
   background-image:
-    radial-gradient(at 80% 0%, hsla(220, 85%, 96%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, hsla(222, 100%, 98%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 50%, hsla(220, 85%, 96%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(222, 100%, 98%, 1) 0px, transparent 50%);
+    radial-gradient(at 80% 0%, hsla(168, 45%, 94%, 0.9) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(172, 40%, 97%, 0.9) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(168, 45%, 96%, 0.7) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(172, 40%, 97%, 0.9) 0px, transparent 50%);
+}
+
+.bg-gradient-primary {
+  background-image: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-deep) 100%);
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fluid-ribbon {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-light) 0%,
+    var(--color-primary) 50%,
+    var(--color-primary-deep) 100%
+  );
+  filter: blur(100px);
+  opacity: 0.12;
+  position: absolute;
+  z-index: 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
 }
 
 @keyframes float {

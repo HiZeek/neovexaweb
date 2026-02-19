@@ -1,10 +1,11 @@
 import { Section } from "@/components/layouts/Section";
 import { Container } from "@/components/layouts/Container";
-import SearchIcon from "../../../public/icons/Search.svg";
-import LowPriorityIcon from "../../../public/icons/LowPriority.svg";
-import DeveloperModeIcon from "../../../public/icons/DeveloperMode.svg";
-import RocketSolutionsIcon from "../../../public/icons/RocketSolutions.svg";
-import Image from "next/image";
+import {
+  SearchIcon,
+  LowPriorityIcon,
+  DeveloperModeIcon,
+  RocketSolutionsIcon,
+} from "@/components/icons/ProcessSectionIcons";
 
 export function ProcessSection() {
   return (
@@ -25,6 +26,7 @@ export function ProcessSection() {
 
           <div className="space-y-12 lg:space-y-24">
             {steps.map((step, index) => {
+              const Icon = step.icon;
               const isEven = index % 2 === 1;
               const containerClasses = isEven
                 ? "relative flex flex-col items-center lg:flex-row-reverse lg:justify-between group"
@@ -39,8 +41,8 @@ export function ProcessSection() {
                 : "mt-6 flex items-center justify-center lg:mt-0 lg:w-5/12 lg:justify-start";
 
               const textAlignClasses = isEven
-                ? "text-center lg:text-left pl-0 lg:pl-8"
-                : "text-center lg:text-right pr-0 lg:pr-8";
+                ? "pt-14 lg:pt-0 text-center lg:text-left pl-0 lg:pl-8"
+                : "pt-14 lg:pt-0 text-center lg:text-right pr-0 lg:pr-8";
 
               const iconAlignClasses = isEven
                 ? "pr-0 lg:pr-8 opacity-40 group-hover:opacity-100 transition-opacity"
@@ -69,9 +71,7 @@ export function ProcessSection() {
 
                   <div className={iconWrapperClasses}>
                     <div className={iconAlignClasses}>
-                      <span className="material-symbols-outlined text-4xl text-primary">
-                        <Image src={step.icon} alt={step.title} width={27} height={33} />
-                      </span>
+                      <Icon className="h-8 w-auto text-primary sm:h-9" aria-hidden />
                     </div>
                   </div>
                 </div>

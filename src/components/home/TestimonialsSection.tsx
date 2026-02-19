@@ -13,7 +13,7 @@ export function TestimonialsSection() {
               className="flex flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
             >
               <div>
-                <div className="mb-4 flex text-yellow-400">
+                <div className="mb-4 flex text-warning">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <span
                       key={index}

@@ -1,5 +1,6 @@
 import { Section } from "@/components/layouts/Section";
 import { Container } from "@/components/layouts/Container";
+import { BookACallTrigger } from "@/components/home/BookACallModal";
 
 export function FooterCTA() {
   return (
@@ -13,9 +14,9 @@ export function FooterCTA() {
           looks like at scale.
         </p>
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-          <button className="flex h-14 items-center justify-center rounded-lg bg-primary px-8 text-lg font-bold text-white shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:bg-primary-dark">
+          <BookACallTrigger className="flex h-14 items-center justify-center rounded-lg bg-primary px-8 text-lg font-bold text-white shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:bg-primary-deep focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-accent-navy">
             Book a Call
-          </button>
+          </BookACallTrigger>
         </div>
         <p className="mt-6 text-sm text-gray-500">
           No commitment required. 30-minute discovery session.

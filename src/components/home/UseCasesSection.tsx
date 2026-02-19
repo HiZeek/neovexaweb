@@ -13,7 +13,7 @@ export function UseCasesSection() {
             </p>
           </div>
           <div className="mt-4 md:mt-0">
-            <button className="flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-dark">
+            <button className="flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-deep focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               View All Case Studies{" "}
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
@@ -33,7 +33,7 @@ export function UseCasesSection() {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-blue-300">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary-accent">
                     {useCase.tag}
                   </p>
                   <h3 className="text-lg font-bold">{useCase.title}</h3>
@@ -42,7 +42,7 @@ export function UseCasesSection() {
               <div className="p-6">
                 <div className="mb-4 flex items-baseline gap-2">
                   <span className="text-3xl font-black text-accent-navy">{useCase.metric}</span>
-                  <span className="text-sm font-medium text-green-600">{useCase.subcopy}</span>
+                  <span className="text-sm font-medium text-success">{useCase.subcopy}</span>
                 </div>
                 <p className="text-sm text-text-secondary">{useCase.description}</p>
               </div>

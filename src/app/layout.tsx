@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Neovexa",
+  title: "Neovexa Consulting Solutions",
   description: "Neovexa web experience",
+  icons: {
+    icon: "/neovexa-logo.jpeg",
+  },
 };
 
 export default function RootLayout({
@@ -13,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-background-light text-text-primary">
-        {children}
-      </body>
+      <body className="antialiased bg-background-light text-text-primary">{children}</body>
     </html>
   );
 }

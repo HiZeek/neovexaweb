@@ -11,11 +11,11 @@ import {
 
 export function SolutionsSection() {
   return (
-    <Section id="services" className="relative overflow-hidden bg-white py-20 lg:py-28">
+    <Section id="solutions" className="relative overflow-hidden bg-white py-20 lg:py-28">
       {/* Background decoration */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-[10%] -top-[20%] h-[600px] w-[600px] rounded-full bg-blue-50/50 blur-3xl" />
-        <div className="absolute top-[40%] -left-[10%] h-[500px] w-[500px] rounded-full bg-indigo-50/50 blur-3xl" />
+        <div className="absolute -right-[10%] -top-[20%] h-[600px] w-[600px] rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute top-[40%] -left-[10%] h-[500px] w-[500px] rounded-full bg-primary-accent/10 blur-3xl" />
       </div>
 
       <Container className="relative z-10 max-w-7xl">
@@ -42,14 +42,14 @@ export function SolutionsSection() {
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-gradient-to-br from-primary/5 to-transparent" />
                 <div className="relative z-10">
-                  <div className="mb-6 inline-flex rounded-lg bg-blue-50 p-3 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                  <div className="mb-6 inline-flex rounded-lg bg-primary/10 p-3 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                     <Icon className="size-5 shrink-0 text-current" aria-hidden />
                   </div>
-                <h3 className="text-xl font-bold text-accent-navy">{solution.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                  {solution.description}
-                </p>
-              </div>
+                  <h3 className="text-xl font-bold text-accent-navy">{solution.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                    {solution.description}
+                  </p>
+                </div>
               </div>
             );
           })}
