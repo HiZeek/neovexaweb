@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Neovexa Consulting Solutions",
+  title: "Neovexa",
   description: "Neovexa web experience",
   icons: {
     icon: "/neovexa-logo.jpeg",

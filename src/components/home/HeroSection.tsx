@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Section } from "@/components/layouts/Section";
 import { Container } from "@/components/layouts/Container";
-import { BoltIcon, CircleCheckIcon } from "@/components/icons/TrustBarIcons";
 import { BookACallTrigger } from "@/components/home/BookACallModal";
+import { HeroCarousel } from "@/components/home/HeroCarousel";
 
 export function HeroSection() {
   return (
@@ -64,9 +64,12 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative w-full max-w-lg lg:ml-auto lg:max-w-none">
+          {/* Hero image carousel */}
+          <HeroCarousel />
+
+          {/* Original dashboard mockup section (commented out, do not delete) */}
+          {/* <div className="relative w-full max-w-lg lg:ml-auto lg:max-w-none">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl">
-              {/* Header */}
               <div className="absolute top-0 z-10 flex h-12 w-full items-center gap-2 border-b border-gray-100 bg-gray-50/50 px-4">
                 <div className="flex gap-1.5">
                   <div className="h-3 w-3 rounded-full bg-error" />
@@ -74,10 +77,7 @@ export function HeroSection() {
                   <div className="h-3 w-3 rounded-full bg-success" />
                 </div>
               </div>
-
-              {/* Dashboard Content Mockup */}
               <div className="absolute inset-0 flex flex-col gap-4 bg-slate-50/30 p-6 pt-12">
-                {/* Top stats row */}
                 <div className="flex gap-4">
                   <div className="flex-1 rounded-lg border border-gray-100 bg-white p-4 shadow-sm">
                     <div className="mb-3 h-2 w-16 rounded bg-gray-200" />
@@ -93,8 +93,6 @@ export function HeroSection() {
                     <div className="mb-1 h-8 w-24 rounded bg-gray-100" />
                   </div>
                 </div>
-
-                {/* Main graph area */}
                 <div className="relative flex-1 overflow-hidden rounded-lg border border-gray-100 bg-white p-4 shadow-sm">
                   <div className="absolute inset-0 flex items-end justify-between gap-2 px-6 pb-6 pt-16">
                     <div className="h-[40%] w-full rounded-t-sm bg-primary/20" />
@@ -110,8 +108,6 @@ export function HeroSection() {
                   </div>
                 </div>
               </div>
-
-              {/* Floating Card 1 */}
               <div className="absolute top-[10%] -right-4 w-48 rounded-lg border border-gray-100 bg-white p-4 shadow-glass animate-[float_4s_ease-in-out_infinite]">
                 <div className="flex items-center gap-3">
                   <div className="rounded-lg bg-success/20 p-2 text-success">
@@ -123,8 +119,6 @@ export function HeroSection() {
                   </div>
                 </div>
               </div>
-
-              {/* Floating Card 2 */}
               <div className="absolute bottom-[5%] -left-4 w-48 rounded-lg border border-gray-100 bg-white p-4 shadow-glass animate-[float_5s_ease-in-out_infinite_0.5s]">
                 <div className="flex items-center gap-3">
                   <div className="rounded-lg bg-primary/20 p-2 text-primary">
@@ -137,10 +131,8 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-
-            {/* Decorative back splash */}
             <div className="absolute -inset-4 -z-10 rounded-xl bg-gradient-to-tr from-primary/20 to-primary-accent/30 opacity-60 blur-2xl" />
-          </div>
+          </div> */}
         </div>
       </Container>
     </Section>
