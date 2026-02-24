@@ -43,7 +43,7 @@ export function ConsultingHeroSection() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="mailto:hello@neovexa.com"
+              href="mailto:info@neovexa.com"
               className="min-h-[48px] w-full rounded-2xl border border-border-subtle bg-white px-6 py-4 font-bold text-text-primary shadow-sm transition-all hover:border-primary/30 hover:bg-surface-muted focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:w-auto sm:px-10 sm:py-5"
             >
               Request a Proposal

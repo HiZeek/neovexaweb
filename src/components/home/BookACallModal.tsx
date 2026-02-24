@@ -2,7 +2,7 @@
 
 /** Microsoft Teams / Bookings appointment URL. Replace with your Bookings page or Teams scheduling link. */
 const TEAMS_BOOKING_URL =
-  "https://outlook.office365.com/owa/calendar/hello@neovexa.com/bookings/s/1739976306415/";
+  "https://outlook.office365.com/owa/calendar/info@neovexa.com/bookings/s/1739976306415/";
 
 import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
 import {
@@ -80,10 +80,10 @@ export function BookACallModalProvider({ children }: { children: ReactNode }) {
               <p className="text-sm text-text-secondary">
                 Contact us to get started:{" "}
                 <a
-                  href="mailto:hello@neovexa.com"
+                  href="mailto:info@neovexa.com"
                   className="font-medium text-primary hover:text-primary-deep"
                 >
-                  hello@neovexa.com
+                  info@neovexa.com
                 </a>
               </p>
             )}
@@ -107,7 +107,7 @@ export function BookACallModalProvider({ children }: { children: ReactNode }) {
                 </a>
               ) : (
                 <a
-                  href="mailto:hello@neovexa.com"
+                  href="mailto:info@neovexa.com"
                   className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-deep"
                 >
                   Email us

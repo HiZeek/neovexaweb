@@ -3,6 +3,7 @@ import { Section } from "@/components/layouts/Section";
 import { Container } from "@/components/layouts/Container";
 import { BookACallTrigger } from "@/components/home/BookACallModal";
 import { HeroCarousel } from "@/components/home/HeroCarousel";
+import { BoltIcon, CircleCheckIcon } from "../icons/TrustBarIcons";
 
 export function HeroSection() {
   return (
@@ -65,10 +66,10 @@ export function HeroSection() {
           </div>
 
           {/* Hero image carousel */}
-          <HeroCarousel />
+          {/* <HeroCarousel /> */}
 
           {/* Original dashboard mockup section (commented out, do not delete) */}
-          {/* <div className="relative w-full max-w-lg lg:ml-auto lg:max-w-none">
+          <div className="relative w-full max-w-lg lg:ml-auto lg:max-w-none">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl">
               <div className="absolute top-0 z-10 flex h-12 w-full items-center gap-2 border-b border-gray-100 bg-gray-50/50 px-4">
                 <div className="flex gap-1.5">
@@ -132,7 +133,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="absolute -inset-4 -z-10 rounded-xl bg-gradient-to-tr from-primary/20 to-primary-accent/30 opacity-60 blur-2xl" />
-          </div> */}
+          </div>
         </div>
       </Container>
     </Section>
